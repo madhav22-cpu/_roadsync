@@ -1,0 +1,32 @@
+@import "tailwindcss";
+/*
+  Scoped Leaflet z-index fix — applies ONLY inside .report-form-map.
+  This prevents the inline report form map from bleeding above dropdowns
+  without affecting the main HazardMap component.
+
+  Wrap the MapPinner's outer div with className="report-form-map"
+*/
+
+.report-form-map {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+}
+
+.report-form-map .leaflet-container {
+  z-index: 0 !important;
+}
+
+
+
+.report-form-map .leaflet-tile-pane    { z-index: 2 !important; }
+.report-form-map .leaflet-shadow-pane  { z-index: 5 !important; }
+.report-form-map .leaflet-overlay-pane { z-index: 4 !important; }
+.report-form-map .leaflet-marker-pane  { z-index: 6 !important; }
+.report-form-map .leaflet-tooltip-pane { z-index: 6 !important; }
+.report-form-map .leaflet-popup-pane   { z-index: 7 !important; }
+
+.report-form-map .leaflet-control-container .leaflet-top,
+.report-form-map .leaflet-control-container .leaflet-bottom {
+  z-index: 8 !important;
+}

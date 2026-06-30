@@ -1,0 +1,10 @@
+{
+  "name": "RoadSync",
+  "description": "Road and civic issue reporting platform. Report potholes, broken streetlights, and garbage dumps with photo and location analysis.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
